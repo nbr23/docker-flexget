@@ -34,6 +34,8 @@ RUN \
 	pip install --upgrade \
 		deluge-client \
 		irc_bot && \
+	echo "**** install curl ****" && \
+	apk add --no-cache --virtual=build-deps curl && \
 	echo "**** install flexget ****" && \
 	apk add --no-cache --virtual=build-deps gcc libxml2-dev libxslt-dev libc-dev python3-dev jpeg-dev && \
 	pip install --upgrade --force-reinstall \
